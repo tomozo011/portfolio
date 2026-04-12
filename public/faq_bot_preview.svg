@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360">
+  <defs>
+    <filter id="sh" x="-5%" y="-5%" width="115%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.11"/>
+    </filter>
+    <clipPath id="cc">
+      <rect x="20" y="10" width="560" height="338" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background (viewer) -->
+  <rect width="600" height="360" fill="#ECEAE4"/>
+
+  <!-- Card shadow -->
+  <rect x="20" y="10" width="560" height="338" rx="10" fill="white" filter="url(#sh)"/>
+
+  <!-- Card clipped content -->
+  <g clip-path="url(#cc)">
+    <!-- Base white -->
+    <rect x="20" y="10" width="560" height="338" fill="white"/>
+
+    <!-- Header -->
+    <rect x="20" y="10" width="560" height="62" fill="#1A3D6B"/>
+
+    <!-- Bot avatar circle -->
+    <circle cx="58" cy="41" r="20" fill="rgba(255,255,255,0.10)"/>
+    <!-- Robot body -->
+    <rect x="46" y="29" width="24" height="18" rx="4" fill="white" opacity="0.92"/>
+    <!-- Eyes -->
+    <circle cx="52" cy="37" r="3" fill="#1A3D6B"/>
+    <circle cx="62" cy="37" r="3" fill="#1A3D6B"/>
+    <!-- Mouth -->
+    <rect x="50" y="44" width="16" height="3.5" rx="1.75" fill="white" opacity="0.92"/>
+    <!-- Antenna -->
+    <line x1="58" y1="29" x2="58" y2="22" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="58" cy="20" r="3" fill="white" opacity="0.7"/>
+
+    <!-- Header title -->
+    <text x="89" y="37" font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, sans-serif" font-size="14" font-weight="700" fill="white">FAQ対応ボット</text>
+    <circle cx="90" cy="53" r="4" fill="#4ADE80"/>
+    <text x="99" y="57" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.70)">オンライン</text>
+
+    <!-- Divider -->
+    <line x1="20" y1="72" x2="580" y2="72" stroke="#F0EDE8" stroke-width="1"/>
+
+    <!-- Timestamp -->
+    <text x="300" y="92" font-family="Arial, sans-serif" font-size="10" fill="#CCCCCC" text-anchor="middle">本日 14:32</text>
+
+    <!-- User bubble (right) -->
+    <rect x="296" y="100" width="260" height="40" rx="20" fill="#E5ECF8"/>
+    <text x="314" y="124" font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, sans-serif" font-size="12" fill="#1A1A1A">返品の手続きを教えてください</text>
+
+    <!-- Bot bubble (left) -->
+    <rect x="24" y="154" width="330" height="148" rx="14" fill="#EEF2FF"/>
+    <rect x="24" y="154" width="5" height="148" rx="2.5" fill="#1A3D6B"/>
+
+    <!-- Bot message header -->
+    <text x="43" y="176" font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, sans-serif" font-size="12" font-weight="700" fill="#1A3D6B">ご返品の手続きについて</text>
+
+    <!-- Step 1 -->
+    <circle cx="55" cy="198" r="9" fill="#1A3D6B" opacity="0.12"/>
+    <text x="55" y="202" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#1A3D6B" text-anchor="middle">1</text>
+    <text x="72" y="202" font-family="Noto Sans JP, sans-serif" font-size="11.5" fill="#333333">購入から30日以内に申請</text>
+
+    <!-- Step 2 -->
+    <circle cx="55" cy="222" r="9" fill="#1A3D6B" opacity="0.12"/>
+    <text x="55" y="226" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#1A3D6B" text-anchor="middle">2</text>
+    <text x="72" y="226" font-family="Noto Sans JP, sans-serif" font-size="11.5" fill="#333333">マイページから申請を行う</text>
+
+    <!-- Step 3 -->
+    <circle cx="55" cy="246" r="9" fill="#1A3D6B" opacity="0.12"/>
+    <text x="55" y="250" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#1A3D6B" text-anchor="middle">3</text>
+    <text x="72" y="250" font-family="Noto Sans JP, sans-serif" font-size="11.5" fill="#333333">着払いにてご返送ください</text>
+
+    <!-- Footer text -->
+    <text x="43" y="286" font-family="Noto Sans JP, sans-serif" font-size="11" fill="#666666">他にご不明な点はございますか？</text>
+
+    <!-- Input area -->
+    <rect x="20" y="304" width="560" height="44" fill="#F6F5F0"/>
+    <line x1="20" y1="304" x2="580" y2="304" stroke="#E0DDD6" stroke-width="1"/>
+    <rect x="34" y="316" width="428" height="20" rx="10" fill="white" stroke="#D5D2CA" stroke-width="1"/>
+    <text x="50" y="330" font-family="Noto Sans JP, sans-serif" font-size="10" fill="#CCCCCC">メッセージを入力...</text>
+    <rect x="474" y="314" width="66" height="24" rx="12" fill="#1A3D6B"/>
+    <text x="507" y="330" font-family="Noto Sans JP, sans-serif" font-size="11" font-weight="600" fill="white" text-anchor="middle">送信</text>
+  </g>
+</svg>

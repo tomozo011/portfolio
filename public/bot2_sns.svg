@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="260" viewBox="0 0 600 260">
+  <!-- Background -->
+  <rect width="600" height="260" fill="#F2F5FF"/>
+
+  <!-- Large decorative # (hashtag) in background -->
+  <text x="200" y="230" font-family="Arial Black, Arial, sans-serif" font-size="260" font-weight="900" fill="#1A3D6B" opacity="0.05">#</text>
+
+  <!-- Decorative circles -->
+  <circle cx="540" cy="40" r="36" fill="#C8D4F0" opacity="0.4"/>
+  <circle cx="60" cy="200" r="24" fill="#C8D4F0" opacity="0.35"/>
+
+  <!-- Phone silhouette -->
+  <rect x="80" y="30" width="130" height="200" rx="14" fill="white" stroke="#1A3D6B" stroke-width="4"/>
+  <!-- Screen area -->
+  <rect x="90" y="55" width="110" height="148" rx="4" fill="#F0F4FD"/>
+  <!-- Home bar -->
+  <rect x="122" y="212" width="46" height="5" rx="2.5" fill="#1A3D6B" opacity="0.25"/>
+  <!-- Speaker notch -->
+  <rect x="122" y="38" width="46" height="6" rx="3" fill="#1A3D6B" opacity="0.2"/>
+
+  <!-- Post preview card on phone screen -->
+  <rect x="94" y="59" width="102" height="96" rx="3" fill="white" stroke="#E0DEDB" stroke-width="1"/>
+  <!-- Post image area (colored block) -->
+  <rect x="94" y="59" width="102" height="58" rx="3" fill="#D4DDF0"/>
+  <!-- Photo mountains icon -->
+  <polygon points="104,108 124,82 144,100 156,88 196,117" fill="#B0C0E0" opacity="0.7"/>
+  <circle cx="178" cy="74" r="8" fill="#C8D4F0"/>
+  <!-- Post text lines -->
+  <rect x="98" y="122" width="70" height="5" rx="2" fill="#1A3D6B" opacity="0.25"/>
+  <rect x="98" y="132" width="90" height="4" rx="2" fill="#1A3D6B" opacity="0.15"/>
+  <rect x="98" y="141" width="80" height="4" rx="2" fill="#1A3D6B" opacity="0.15"/>
+  <!-- Hashtag text in post -->
+  <text x="98" y="157" font-family="Arial, sans-serif" font-size="8" fill="#2C5899" font-weight="600">#朝活  #ライフスタイル</text>
+
+  <!-- Engagement bar on phone -->
+  <rect x="94" y="162" width="102" height="24" rx="3" fill="white" stroke="#E0DEDB" stroke-width="1"/>
+  <!-- Heart -->
+  <text x="100" y="178" font-family="Arial" font-size="12" fill="#E07070">♥</text>
+  <text x="114" y="178" font-family="Arial" font-size="9" fill="#888">24</text>
+  <!-- Comment bubble -->
+  <text x="136" y="178" font-family="Arial" font-size="11" fill="#1A3D6B" opacity="0.5">✦</text>
+  <text x="150" y="178" font-family="Arial" font-size="9" fill="#888">8</text>
+
+  <!-- Chat bubble / generation output -->
+  <rect x="250" y="50" width="310" height="110" rx="14" fill="#1A3D6B"/>
+  <polygon points="250,105 232,112 250,119" fill="#1A3D6B"/>
+  <text x="405" y="84" font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, sans-serif" font-size="12" font-weight="700" fill="white" text-anchor="middle">投稿文を自動で作成します</text>
+  <!-- Divider line -->
+  <line x1="268" y1="94" x2="542" y2="94" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <!-- Generated text lines -->
+  <rect x="268" y="102" width="180" height="7" rx="3" fill="white" opacity="0.25"/>
+  <rect x="268" y="116" width="210" height="7" rx="3" fill="white" opacity="0.18"/>
+  <rect x="268" y="130" width="140" height="7" rx="3" fill="white" opacity="0.18"/>
+  <!-- Hashtag label -->
+  <text x="268" y="152" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,0.7)"># 投稿テキスト生成</text>
+
+  <!-- Floating stars / likes -->
+  <text x="268" y="200" font-family="Arial" font-size="18" fill="#1A3D6B" opacity="0.2">★</text>
+  <text x="300" y="220" font-family="Arial" font-size="13" fill="#1A3D6B" opacity="0.15">★</text>
+  <text x="480" y="195" font-family="Arial" font-size="14" fill="#1A3D6B" opacity="0.15">★</text>
+  <text x="530" y="215" font-family="Arial" font-size="18" fill="#1A3D6B" opacity="0.1">★</text>
+
+  <!-- Label -->
+  <text x="30" y="26" font-family="Noto Sans JP, sans-serif" font-size="10" font-weight="700" fill="#1A3D6B" opacity="0.6" letter-spacing="2">SNS CONTENT</text>
+</svg>

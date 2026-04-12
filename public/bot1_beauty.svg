@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="260" viewBox="0 0 600 260">
+  <!-- Background -->
+  <rect width="600" height="260" fill="#FEF8F5"/>
+
+  <!-- Decorative circles -->
+  <circle cx="560" cy="30" r="40" fill="#F5DEDA" opacity="0.5"/>
+  <circle cx="40" cy="220" r="30" fill="#F5DEDA" opacity="0.4"/>
+  <circle cx="490" cy="200" r="18" fill="#E8C8C0" opacity="0.35"/>
+
+  <!-- Salon mirror (oval frame) -->
+  <ellipse cx="175" cy="120" rx="78" ry="96" fill="#1A3D6B" opacity="0.07"/>
+  <ellipse cx="175" cy="120" rx="68" ry="86" fill="white"/>
+  <ellipse cx="175" cy="120" rx="70" ry="88" fill="none" stroke="#1A3D6B" stroke-width="5"/>
+  <!-- Mirror stand -->
+  <rect x="168" y="208" width="14" height="26" rx="3" fill="#1A3D6B" opacity="0.4"/>
+  <rect x="148" y="232" width="54" height="7" rx="3.5" fill="#1A3D6B" opacity="0.3"/>
+
+  <!-- Scissors (large, elegant, crossing) centered right area -->
+  <!-- Blade 1: top-left to bottom-right -->
+  <line x1="310" y1="40" x2="430" y2="190" stroke="#1A3D6B" stroke-width="7" stroke-linecap="round"/>
+  <!-- Blade 2: top-right to bottom-left -->
+  <line x1="430" y1="40" x2="310" y2="190" stroke="#1A3D6B" stroke-width="7" stroke-linecap="round"/>
+  <!-- Pivot -->
+  <circle cx="370" cy="115" r="10" fill="#1A3D6B"/>
+  <circle cx="370" cy="115" r="5" fill="white"/>
+  <!-- Handle rings (top) -->
+  <circle cx="304" cy="34" r="14" fill="none" stroke="#1A3D6B" stroke-width="5"/>
+  <circle cx="436" cy="34" r="14" fill="none" stroke="#1A3D6B" stroke-width="5"/>
+  <!-- Handle rings (bottom) -->
+  <circle cx="304" cy="196" r="14" fill="none" stroke="#1A3D6B" stroke-width="5"/>
+  <circle cx="436" cy="196" r="14" fill="none" stroke="#1A3D6B" stroke-width="5"/>
+
+  <!-- Chat bubble (automated response) -->
+  <rect x="478" y="60" width="108" height="74" rx="12" fill="#1A3D6B"/>
+  <polygon points="478,100 462,108 478,116" fill="#1A3D6B"/>
+  <text x="532" y="90" font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">ご予約</text>
+  <text x="532" y="108" font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">承りました！</text>
+  <text x="532" y="124" font-family="Noto Sans JP, sans-serif" font-size="9" fill="rgba(255,255,255,0.7)" text-anchor="middle">24時間自動対応</text>
+
+  <!-- Small decorative comb below scissors -->
+  <rect x="330" y="222" width="80" height="12" rx="3" fill="#1A3D6B" opacity="0.15"/>
+  <rect x="335" y="218" width="5" height="8" rx="1" fill="#1A3D6B" opacity="0.2"/>
+  <rect x="345" y="218" width="5" height="8" rx="1" fill="#1A3D6B" opacity="0.2"/>
+  <rect x="355" y="218" width="5" height="8" rx="1" fill="#1A3D6B" opacity="0.2"/>
+  <rect x="365" y="218" width="5" height="8" rx="1" fill="#1A3D6B" opacity="0.2"/>
+  <rect x="375" y="218" width="5" height="8" rx="1" fill="#1A3D6B" opacity="0.2"/>
+  <rect x="385" y="218" width="5" height="8" rx="1" fill="#1A3D6B" opacity="0.2"/>
+  <rect x="395" y="218" width="5" height="8" rx="1" fill="#1A3D6B" opacity="0.2"/>
+
+  <!-- Sparkle dots -->
+  <circle cx="260" cy="50" r="3" fill="#C8908A" opacity="0.5"/>
+  <circle cx="280" cy="30" r="2" fill="#C8908A" opacity="0.4"/>
+  <circle cx="470" cy="230" r="4" fill="#1A3D6B" opacity="0.15"/>
+  <circle cx="520" cy="210" r="3" fill="#1A3D6B" opacity="0.12"/>
+
+  <!-- Label -->
+  <text x="30" y="26" font-family="Noto Sans JP, sans-serif" font-size="10" font-weight="700" fill="#1A3D6B" opacity="0.6" letter-spacing="2">BEAUTY SALON</text>
+</svg>
