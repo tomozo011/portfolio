@@ -1,16 +1,17 @@
 import Image from "next/image";
 import Anim from "./Anim";
+import SectionHeader from "./SectionHeader";
 
 const steps = [
   {
     num: "01",
     label: "ヒアリング",
-    desc: "目的・ターゲット・現状課題をオンラインでヒアリング",
+    desc: "目的・ターゲット・現状課題をオンラインで整理します",
   },
   {
     num: "02",
     label: "提案・見積もり",
-    desc: "構成案と概算費用をご提示。小さく始めて改善していく進め方を推奨",
+    desc: "構成案と概算費用をご提示。小さく始める進め方を推奨",
   },
   {
     num: "03",
@@ -25,9 +26,9 @@ const steps = [
 ];
 
 const stance = [
-  "まずは「0→1」で小さく始めて、一緒に改善していく進め方を大事にしています",
-  "専門用語をできるだけ使わず、分かりやすく状況を共有することを意識しています",
-  "基本は夜・休日の対応ですが、進捗報告はこまめに行います",
+  "まず小さく動くものを作り、一緒に改善していくスタンスで進めます",
+  "専門用語を使わず、状況をこまめに共有します",
+  "基本は夜・休日の対応ですが、レスポンスは迅速に行います",
 ];
 
 export default function About() {
@@ -38,39 +39,18 @@ export default function About() {
       style={{ background: "var(--bg)" }}
     >
       <div className="max-w-5xl mx-auto">
-        <Anim>
-          <div className="flex items-baseline gap-4 mb-2">
-            <span
-              className="text-xs font-bold tracking-[0.22em]"
-              style={{ color: "var(--accent)" }}
-            >
-              § 04
-            </span>
-            <span
-              className="text-xs font-bold tracking-[0.2em] uppercase"
-              style={{ color: "var(--text-muted)" }}
-            >
-              About
-            </span>
-          </div>
-          <h2
-            className="text-2xl md:text-4xl font-bold mb-4"
-            style={{ color: "var(--text)" }}
-          >
-            自己紹介
-          </h2>
-          <div className="doc-rule" />
-        </Anim>
+        <SectionHeader en="About" ja="自己紹介" />
 
         <Anim delay={100}>
-          <div className="flex flex-col md:flex-row gap-10 items-start mb-14">
+          <div className="flex flex-col md:flex-row gap-10 items-start mb-16">
             <div className="flex-shrink-0 flex flex-col items-center gap-3 mx-auto md:mx-0">
               <Image
-                src="/Character_left.png"
+                src="/hero.jpg"
                 alt="岩城智啓"
                 width={160}
                 height={200}
-                className="h-auto"
+                className="object-cover object-top"
+                style={{ width: "160px", height: "200px", filter: "grayscale(20%)" }}
               />
               <div
                 className="text-center pt-3"
@@ -85,23 +65,28 @@ export default function About() {
               </div>
             </div>
 
-            <div className="flex-1 space-y-4 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+            <div
+              className="flex-1 space-y-4 text-sm leading-relaxed"
+              style={{ color: "var(--text-muted)" }}
+            >
               <p>
-                本業ではシステムエンジニアとして勤務しながら、副業で「LP実装」と「小さな業務自動化」のサポートをしています。
+                システムエンジニアとして業務改善・開発に取り組みながら、
+                副業でLP制作・チャットボット構築・業務自動化の支援をしています。
               </p>
               <p>
-                業務では Cursor などのツールを使ってテスト仕様書の作成を半自動化するなど、
                 <span style={{ color: "var(--text)", fontWeight: 600 }}>
-                  「AI／ノーコードツールをうまく活用して現場の負担を減らす」
+                  「AIとノーコードツールを活用して、現場の負担を減らす仕組みをつくる」
                 </span>
-                ことに取り組んでいます。
+                が一貫したテーマです。本業でも Cursor・Claude Codeを使って手作業を半自動化し、
+                その実践から得た知見を副業に活かしています。
               </p>
               <p>
-                副業でも同じスタンスで、Dify を使ったチャットボット作成・Claude Code を使ったLP実装・問い合わせ情報の自動保存など、
-                <span style={{ color: "var(--accent2)", fontWeight: 600 }}>
-                  「現場の手間を軽くする仕組みづくり」
+                スピードと透明性を大切に、
+                <span style={{ color: "var(--accent)", fontWeight: 600 }}>
+                  「小さく始めて一緒に改善する」
                 </span>
-                をお手伝いしています。
+                スタンスで取り組みます。
+                専門用語を使わず、状況をこまめに共有しながら進めます。
               </p>
 
               <div
@@ -112,8 +97,14 @@ export default function About() {
                 }}
               >
                 <p
-                  className="text-xs font-bold tracking-widest uppercase mb-3"
-                  style={{ color: "var(--accent)" }}
+                  style={{
+                    fontSize: "11px",
+                    fontWeight: 700,
+                    letterSpacing: "0.35em",
+                    textTransform: "uppercase",
+                    color: "var(--accent)",
+                    marginBottom: "14px",
+                  }}
                 >
                   Stance
                 </p>
@@ -140,15 +131,19 @@ export default function About() {
         </Anim>
 
         <Anim delay={150}>
-          <h3
-            className="text-base font-bold mb-2 tracking-wide"
-            style={{ color: "var(--text-muted)", letterSpacing: "0.1em" }}
+          <p
+            style={{
+              fontSize: "11px",
+              fontWeight: 700,
+              letterSpacing: "0.4em",
+              textTransform: "uppercase",
+              color: "var(--text-muted)",
+              marginBottom: "16px",
+            }}
           >
-            WORKFLOW — 仕事の進め方
-          </h3>
-          <div
-            style={{ borderBottom: "1px solid var(--border)", marginBottom: "32px" }}
-          />
+            Workflow
+          </p>
+          <div style={{ borderBottom: "1px solid var(--border)", marginBottom: "32px" }} />
         </Anim>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0">
@@ -165,7 +160,7 @@ export default function About() {
               >
                 <div
                   className="text-2xl font-bold mb-3"
-                  style={{ color: "var(--text-muted)" }}
+                  style={{ color: "var(--accent)", letterSpacing: "0.05em" }}
                 >
                   {step.num}
                 </div>

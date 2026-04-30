@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Anim from "./Anim";
+import SectionHeader from "./SectionHeader";
 
 const works = [
   {
@@ -30,29 +31,7 @@ export default function LpPortfolio() {
       style={{ background: "var(--bg)" }}
     >
       <div className="max-w-5xl mx-auto">
-        <Anim>
-          <div className="flex items-baseline gap-4 mb-2">
-            <span
-              className="text-xs font-bold tracking-[0.22em]"
-              style={{ color: "var(--accent)" }}
-            >
-              § 02
-            </span>
-            <span
-              className="text-xs font-bold tracking-[0.2em] uppercase"
-              style={{ color: "var(--text-muted)" }}
-            >
-              LP Portfolio
-            </span>
-          </div>
-          <h2
-            className="text-2xl md:text-4xl font-bold mb-4"
-            style={{ color: "var(--text)" }}
-          >
-            制作したLP・デモ作品
-          </h2>
-          <div className="doc-rule" />
-        </Anim>
+        <SectionHeader en="LP Portfolio" ja="制作実績・デモ作品" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {works.map((work, i) => (
@@ -74,7 +53,10 @@ export default function LpPortfolio() {
                 <div className="p-6" style={{ background: "var(--bg)" }}>
                   <div
                     className="flex items-start justify-between mb-3"
-                    style={{ borderBottom: "1px solid var(--border)", paddingBottom: "12px" }}
+                    style={{
+                      borderBottom: "1px solid var(--border)",
+                      paddingBottom: "12px",
+                    }}
                   >
                     <h3
                       className="font-bold text-lg"
@@ -84,14 +66,14 @@ export default function LpPortfolio() {
                     </h3>
                     <span
                       className="text-xs font-bold mt-1"
-                      style={{ color: "var(--text-muted)" }}
+                      style={{ color: "var(--text-muted)", letterSpacing: "0.05em" }}
                     >
                       No.{work.id}
                     </span>
                   </div>
                   <p
                     className="text-sm leading-relaxed mb-5"
-                    style={{ color: "var(--text-muted)" }}
+                    style={{ color: "var(--text-muted)", lineHeight: 1.8 }}
                   >
                     {work.description}
                   </p>
@@ -108,7 +90,7 @@ export default function LpPortfolio() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs font-bold flex items-center gap-1 transition-opacity hover:opacity-70 flex-shrink-0 ml-4"
-                      style={{ color: "var(--accent2)" }}
+                      style={{ color: "var(--accent)" }}
                     >
                       サイトを見る
                       <svg

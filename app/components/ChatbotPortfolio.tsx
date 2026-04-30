@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Anim from "./Anim";
+import SectionHeader from "./SectionHeader";
 
 const bots = [
   {
@@ -56,34 +57,18 @@ export default function ChatbotPortfolio() {
       style={{ background: "var(--bg-card)" }}
     >
       <div className="max-w-5xl mx-auto">
+        <SectionHeader en="Chatbot Portfolio" ja="チャットボット事例" />
+
         <Anim>
-          <div className="flex items-baseline gap-4 mb-2">
-            <span
-              className="text-xs font-bold tracking-[0.22em]"
-              style={{ color: "var(--accent)" }}
-            >
-              § 03
-            </span>
-            <span
-              className="text-xs font-bold tracking-[0.2em] uppercase"
-              style={{ color: "var(--text-muted)" }}
-            >
-              Chatbot Portfolio
-            </span>
-          </div>
-          <h2
-            className="text-2xl md:text-4xl font-bold mb-4"
-            style={{ color: "var(--text)" }}
-          >
-            チャットボットの事例
-          </h2>
           <p className="text-sm mb-1" style={{ color: "var(--text-muted)" }}>
             リンクから実際のデモをお試しいただけます。
           </p>
-          <p className="text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <p
+            className="text-xs mb-10"
+            style={{ color: "var(--text-muted)", opacity: 0.7 }}
+          >
             ※ 導入後の変化はイメージです。
           </p>
-          <div className="doc-rule" />
         </Anim>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -122,39 +107,63 @@ export default function ChatbotPortfolio() {
 
                   <div className="mb-3">
                     <p
-                      className="text-xs font-bold tracking-widest uppercase mb-1"
-                      style={{ color: "var(--text-muted)" }}
+                      className="text-xs font-bold mb-1"
+                      style={{
+                        color: "var(--text-muted)",
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase",
+                      }}
                     >
                       課題
                     </p>
-                    <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                    <p
+                      className="text-sm leading-relaxed"
+                      style={{ color: "var(--text-muted)" }}
+                    >
                       {bot.issue}
                     </p>
                   </div>
 
                   <div
                     className="mb-3 p-3"
-                    style={{ background: "var(--bg-card)", borderLeft: "3px solid var(--accent)" }}
+                    style={{
+                      background: "var(--bg-card)",
+                      borderLeft: "2px solid var(--accent)",
+                    }}
                   >
                     <p
-                      className="text-xs font-bold tracking-widest uppercase mb-1"
-                      style={{ color: "var(--accent)" }}
+                      className="text-xs font-bold mb-1"
+                      style={{
+                        color: "var(--accent)",
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase",
+                      }}
                     >
                       解決方法
                     </p>
-                    <p className="text-sm leading-relaxed" style={{ color: "var(--text)" }}>
+                    <p
+                      className="text-sm leading-relaxed"
+                      style={{ color: "var(--text)" }}
+                    >
                       {bot.solution}
                     </p>
                   </div>
 
                   <div className="mb-4">
                     <p
-                      className="text-xs font-bold tracking-widest uppercase mb-1"
-                      style={{ color: "var(--text-muted)" }}
+                      className="text-xs font-bold mb-1"
+                      style={{
+                        color: "var(--text-muted)",
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase",
+                      }}
                     >
                       導入後の変化
                     </p>
-                    <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                    <p
+                      className="text-sm leading-relaxed"
+                      style={{ color: "var(--text-muted)" }}
+                    >
                       {bot.result}
                     </p>
                   </div>
@@ -175,7 +184,7 @@ export default function ChatbotPortfolio() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs font-bold flex items-center gap-1 transition-opacity hover:opacity-70 flex-shrink-0 ml-4"
-                      style={{ color: "var(--accent2)" }}
+                      style={{ color: "var(--accent)" }}
                     >
                       デモを試す
                       <svg

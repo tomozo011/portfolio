@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Anim from "./Anim";
+import SectionHeader from "./SectionHeader";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">(
@@ -32,7 +33,7 @@ export default function Contact() {
   }
 
   const inputStyle = {
-    background: "var(--bg)",
+    background: "var(--bg-card)",
     border: "1px solid var(--border)",
     color: "var(--text)",
     outline: "none",
@@ -40,6 +41,7 @@ export default function Contact() {
     padding: "12px 16px",
     fontSize: "14px",
     fontFamily: "inherit",
+    transition: "border-color 0.2s",
   } as React.CSSProperties;
 
   return (
@@ -49,43 +51,33 @@ export default function Contact() {
       style={{ background: "var(--bg-card)" }}
     >
       <div className="max-w-5xl mx-auto">
-        <Anim>
-          <div className="flex items-baseline gap-4 mb-2">
-            <span
-              className="text-xs font-bold tracking-[0.22em]"
-              style={{ color: "var(--accent)" }}
-            >
-              § 05
-            </span>
-            <span
-              className="text-xs font-bold tracking-[0.2em] uppercase"
-              style={{ color: "var(--text-muted)" }}
-            >
-              Contact
-            </span>
-          </div>
-          <h2
-            className="text-2xl md:text-4xl font-bold mb-4"
-            style={{ color: "var(--text)" }}
-          >
-            お問い合わせ
-          </h2>
-          <div className="doc-rule" />
-        </Anim>
+        <SectionHeader en="Contact" ja="お問い合わせ" />
 
         <div className="flex flex-col md:flex-row gap-12">
           <Anim delay={100} className="md:w-72 flex-shrink-0">
-            <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-muted)" }}>
+            <p
+              className="text-sm leading-relaxed mb-6"
+              style={{ color: "var(--text-muted)", lineHeight: 1.9 }}
+            >
               「まずは相談から」大歓迎です。
+              <br />
               ざっくりしたご相談でも、具体的な形に落とし込むお手伝いをします。
             </p>
             <div
               className="p-5 space-y-3"
-              style={{ border: "1px solid var(--border)", background: "var(--bg)" }}
+              style={{
+                border: "1px solid var(--border)",
+                background: "var(--bg)",
+              }}
             >
               <p
-                className="text-xs font-bold tracking-widest uppercase"
-                style={{ color: "var(--accent)" }}
+                style={{
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  letterSpacing: "0.3em",
+                  textTransform: "uppercase",
+                  color: "var(--accent)",
+                }}
               >
                 Response Time
               </p>
@@ -109,8 +101,12 @@ export default function Contact() {
 
               <div>
                 <label
-                  className="block text-xs font-bold tracking-widest uppercase mb-2"
-                  style={{ color: "var(--text-muted)" }}
+                  className="block text-xs font-bold mb-2"
+                  style={{
+                    color: "var(--text-muted)",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                  }}
                 >
                   お名前 <span style={{ color: "var(--accent)" }}>*</span>
                 </label>
@@ -120,13 +116,19 @@ export default function Contact() {
                   required
                   placeholder="山田 太郎"
                   style={inputStyle}
+                  onFocus={(e) => (e.currentTarget.style.borderColor = "var(--accent)")}
+                  onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
                 />
               </div>
 
               <div>
                 <label
-                  className="block text-xs font-bold tracking-widest uppercase mb-2"
-                  style={{ color: "var(--text-muted)" }}
+                  className="block text-xs font-bold mb-2"
+                  style={{
+                    color: "var(--text-muted)",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                  }}
                 >
                   メールアドレス <span style={{ color: "var(--accent)" }}>*</span>
                 </label>
@@ -136,13 +138,19 @@ export default function Contact() {
                   required
                   placeholder="example@email.com"
                   style={inputStyle}
+                  onFocus={(e) => (e.currentTarget.style.borderColor = "var(--accent)")}
+                  onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
                 />
               </div>
 
               <div>
                 <label
-                  className="block text-xs font-bold tracking-widest uppercase mb-2"
-                  style={{ color: "var(--text-muted)" }}
+                  className="block text-xs font-bold mb-2"
+                  style={{
+                    color: "var(--text-muted)",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                  }}
                 >
                   お問い合わせ内容 <span style={{ color: "var(--accent)" }}>*</span>
                 </label>
@@ -152,6 +160,8 @@ export default function Contact() {
                   rows={6}
                   placeholder="ご相談内容をご記入ください。「LP制作について相談したい」「チャットボットを試してみたい」など、ざっくりした内容でも構いません。"
                   style={{ ...inputStyle, resize: "none" }}
+                  onFocus={(e) => (e.currentTarget.style.borderColor = "var(--accent)")}
+                  onBlur={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
                 />
               </div>
 
@@ -163,22 +173,23 @@ export default function Contact() {
                   background: "var(--accent)",
                   color: "#fff",
                   alignSelf: "flex-start",
+                  letterSpacing: "0.05em",
                 }}
               >
                 {status === "sending"
                   ? "送信中..."
                   : status === "done"
-                  ? "送信しました"
+                  ? "送信しました ✓"
                   : "送信する →"}
               </button>
 
               {status === "done" && (
-                <p className="text-sm" style={{ color: "var(--accent2)" }}>
+                <p className="text-sm" style={{ color: "var(--text-muted)" }}>
                   お問い合わせありがとうございます。2〜3営業日以内にご返信します。
                 </p>
               )}
               {status === "error" && (
-                <p className="text-sm" style={{ color: "#B91C1C" }}>
+                <p className="text-sm" style={{ color: "var(--accent)" }}>
                   送信に失敗しました。直接メールにてご連絡ください：
                   work.mail7530@gmail.com
                 </p>

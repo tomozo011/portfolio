@@ -1,117 +1,201 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Hero() {
   return (
     <section
-      className="section relative overflow-hidden"
-      style={{ background: "var(--bg)" }}
+      className="relative overflow-hidden"
+      style={{ minHeight: "100vh", background: "var(--bg)" }}
     >
-      <div className="max-w-5xl mx-auto">
-        {/* ドキュメントヘッダー */}
+      {/* 右側の人物画像 */}
+      <div
+        className="hidden md:block"
+        style={{
+          position: "absolute",
+          top: 0,
+          right: 0,
+          width: "42%",
+          height: "100%",
+          zIndex: 0,
+        }}
+      >
+        <Image
+          src="/hero.jpg"
+          alt=""
+          fill
+          priority
+          style={{ objectFit: "cover", objectPosition: "center top", opacity: 0.65 }}
+        />
+        {/* 左フェード */}
         <div
-          className="flex justify-between items-center pb-5 mb-12"
           style={{
-            borderBottom: "2px solid var(--text)",
-            animation: "heroFadeUp 0.5s cubic-bezier(0.22,1,0.36,1) both",
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(to right, #080808 0%, rgba(8,8,8,0.4) 35%, rgba(8,8,8,0) 100%)",
+          }}
+        />
+        {/* 下フェード */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: "200px",
+            background: "linear-gradient(to top, #080808, transparent)",
+          }}
+        />
+      </div>
+
+      {/* コンテンツ */}
+      <div
+        className="relative flex items-center"
+        style={{
+          minHeight: "100vh",
+          padding: "88px 24px 64px",
+          maxWidth: "1024px",
+          margin: "0 auto",
+          zIndex: 1,
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "560px",
+            animation: "heroFadeUp 0.65s cubic-bezier(0.22,1,0.36,1) both",
           }}
         >
-          <span
-            className="text-xs font-bold tracking-[0.22em] uppercase"
-            style={{ color: "var(--text-muted)" }}
-          >
-            Portfolio Document
-          </span>
-          <span className="text-xs" style={{ color: "var(--text-muted)" }}>
-            2026 — 岩城 智啓
-          </span>
-        </div>
-
-        {/* メインコンテンツ */}
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          {/* テキスト */}
-          <div
-            className="flex-1"
+          <p
             style={{
-              animation: "heroFadeUp 0.65s cubic-bezier(0.22,1,0.36,1) 0.1s both",
+              fontSize: "11px",
+              fontWeight: 700,
+              letterSpacing: "0.45em",
+              textTransform: "uppercase",
+              color: "var(--accent)",
+              marginBottom: "32px",
             }}
           >
-            <p
-              className="text-xs font-bold tracking-[0.28em] uppercase mb-6"
-              style={{ color: "var(--accent)" }}
-            >
-              § 00 &nbsp; Introduction
-            </p>
+            SE Freelance Portfolio
+          </p>
 
-            <h1
-              className="text-4xl md:text-[56px] font-bold leading-tight mb-5"
-              style={{ color: "var(--text)", letterSpacing: "-0.01em" }}
-            >
-              LP制作 × チャットボットで
-              <br />
-              <span style={{ color: "var(--accent2)" }}>オンライン集客</span>
-              をサポート
-            </h1>
+          <h1
+            style={{
+              fontWeight: 700,
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em",
+              fontSize: "clamp(2.75rem, 7vw, 5rem)",
+              color: "var(--text)",
+              marginBottom: "24px",
+            }}
+          >
+            仕組みが、
+            <br />
+            <span style={{ color: "var(--accent)", whiteSpace: "nowrap" }}>ビジネスを変える。</span>
+          </h1>
 
-            <div
+          <div
+            style={{
+              width: "40px",
+              height: "2px",
+              background: "var(--accent)",
+              marginBottom: "28px",
+            }}
+          />
+
+          <p
+            style={{
+              fontSize: "15px",
+              lineHeight: 1.9,
+              color: "var(--text-muted)",
+              marginBottom: "40px",
+            }}
+          >
+            LP制作 / チャットボット / 業務自動化
+            <br />
+            AIとノーコードを活用した実装で、
+            <br />
+            現場の課題を解決します。
+          </p>
+
+          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+            <a
+              href="#services"
               style={{
-                width: "48px",
-                height: "3px",
+                display: "inline-block",
+                padding: "14px 32px",
                 background: "var(--accent)",
-                marginBottom: "24px",
+                color: "#fff",
+                fontSize: "13px",
+                fontWeight: 700,
+                letterSpacing: "0.05em",
+                textDecoration: "none",
+                transition: "opacity 0.2s",
               }}
-            />
-
-            <p
-              className="text-base leading-relaxed mb-10"
-              style={{ color: "var(--text-muted)" }}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.8")}
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
             >
-              SE副業として、ノーコード・ローコードを活用した
-              <br className="hidden md:inline" />
-              LP実装・チャットボット構築をお手伝いしています。
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#lp-portfolio"
-                className="px-8 py-4 font-semibold text-sm tracking-wide text-center transition-opacity duration-200 hover:opacity-80"
-                style={{
-                  background: "var(--accent)",
-                  color: "#fff",
-                }}
-              >
-                LP制作の詳細を見る →
-              </a>
-              <a
-                href="#contact"
-                className="px-8 py-4 font-semibold text-sm tracking-wide text-center transition-colors duration-200"
-                style={{
-                  border: "2px solid var(--accent)",
-                  color: "var(--accent)",
-                  background: "transparent",
-                }}
-              >
-                お問い合わせ
-              </a>
-            </div>
-          </div>
-
-          {/* キャラクター画像 */}
-          <div
-            className="flex-shrink-0 w-44 md:w-60"
-            style={{
-              animation: "heroFadeUp 0.65s cubic-bezier(0.22,1,0.36,1) 0.25s both",
-            }}
-          >
-            <Image
-              src="/Character_left.png"
-              alt="岩城智啓"
-              width={240}
-              height={300}
-              className="w-full h-auto"
-              priority
-            />
+              サービスを見る →
+            </a>
+            <a
+              href="#contact"
+              style={{
+                display: "inline-block",
+                padding: "14px 32px",
+                border: "1px solid var(--text-muted)",
+                color: "var(--text-muted)",
+                fontSize: "13px",
+                fontWeight: 700,
+                letterSpacing: "0.05em",
+                textDecoration: "none",
+                transition: "color 0.2s, border-color 0.2s",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = "var(--text)";
+                e.currentTarget.style.borderColor = "var(--text)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = "var(--text-muted)";
+                e.currentTarget.style.borderColor = "var(--text-muted)";
+              }}
+            >
+              まずは無料相談
+            </a>
           </div>
         </div>
+      </div>
+
+      {/* スクロールインジケーター */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "36px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "8px",
+          animation: "heroFadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.8s both",
+          zIndex: 1,
+        }}
+      >
+        <span
+          style={{
+            fontSize: "9px",
+            letterSpacing: "0.35em",
+            color: "var(--text-muted)",
+            textTransform: "uppercase",
+          }}
+        >
+          SCROLL
+        </span>
+        <div
+          style={{
+            width: "1px",
+            height: "40px",
+            background: "linear-gradient(to bottom, var(--text-muted), transparent)",
+          }}
+        />
       </div>
     </section>
   );

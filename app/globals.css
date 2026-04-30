@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #141414;
-  --bg-card: #1C1C1C;
-  --bg-card2: #141414;
-  --accent: #4D8FD6;
-  --accent2: #6AAFF0;
-  --text: #EDEAE4;
-  --text-muted: #8C8884;
-  --border: #383838;
+  --bg: #080808;
+  --bg-card: #0F0F0F;
+  --bg-card2: #080808;
+  --accent: #C0392B;
+  --accent2: #E74C3C;
+  --text: #F0EDE8;
+  --text-muted: #6E6A66;
+  --border: #222222;
 }
 
 @theme inline {
@@ -31,58 +31,49 @@ html {
 }
 
 body {
-  background: #0F0F0F;
+  background: #080808;
   color: var(--text);
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
+/* 固定ナビゲーション分のオフセット */
+section[id] {
+  scroll-margin-top: 64px;
+}
+
 /* スクロールバー */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #0F0F0F;
+  background: #080808;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--border);
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 /* セクション共通 */
 .section {
-  padding: 72px 24px;
+  padding: 96px 24px;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding: 96px 48px;
+    padding: 120px 48px;
   }
-}
-
-/* ページ影 */
-.page-shadow {
-  box-shadow: 0 2px 16px rgba(0,0,0,0.40), 0 1px 4px rgba(0,0,0,0.20);
-}
-
-/* セクション見出し装飾 */
-.doc-rule {
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 48px;
-  padding-bottom: 16px;
 }
 
 /* ============================================
    アニメーション
    ============================================ */
 
-/* ヒーロー: ページロード時 */
 @keyframes heroFadeUp {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* スクロール連動フェードアップ */
 .scroll-anim {
   opacity: 0;
   transform: translateY(24px);
@@ -95,24 +86,14 @@ body {
   transform: translateY(0);
 }
 
-/* ルール線アニメーション */
-.doc-rule-anim {
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
-}
-
-.scroll-anim.in-view .doc-rule-anim {
-  transform: scaleX(1);
-}
-
 /* タグ */
 .doc-tag {
   display: inline-block;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  font-size: 11px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   padding: 2px 8px;
+  text-transform: uppercase;
 }
