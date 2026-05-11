@@ -21,6 +21,15 @@ const works = [
     url: "https://aurum-whey-n2k4dbxmz-tomozo011s-projects.vercel.app/",
     tags: ["LP制作", "高級感", "フィットネス"],
   },
+  {
+    id: "03",
+    title: "BLOOM PERSONAL TRAINING",
+    description:
+      "元プロトレーナーが運営する24時間対応パーソナルジムのLP。「続けられるから、変われる。」というキャッチコピーで継続性を訴求。完全個別対応・元プロ指導の強みを前面に打ち出し、無料体験への導線をシンプルに設計しました。",
+    image: "/sportsjim.png",
+    url: "https://sportsjim.vercel.app/",
+    tags: ["LP制作", "フィットネス", "パーソナルジム"],
+  },
 ];
 
 export default function LpPortfolio() {
